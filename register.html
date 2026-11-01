@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sweet Crumbs | Register</title>
+        <link rel="stylesheet" href="register.css">
+    </head>
+<body>
+    <header class="register-header">
+        <h1>Customer Registration</h1>
+        <p>Create your Sweet Crumbs Bakery customer profile.</p>
+    </header>
+<nav class="register-nav">
+    <a href="index.html">Home</a>
+    <a href="media.html">Media &amp; Info</a>
+    <a class="selected" href="register.html">Register</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<main class="form-area">
+    <form class="registration-form" action="#" method="get">
+        <h2>Personal Information</h2>
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3" maxlength="40">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8" maxlength="20">
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="birthdate">Date of Birth</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+        <div class="form-group">
+            <label for="website">Personal or Business Website (URL)</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com">
+        </div>
+        <div class="form-group">
+            <label for="favourite">Favourite Bakery Colour</label>
+            <input type="color" id="favourite" name="favourite" value="#8b4e2f">
+        </div>
+        <div class="form-group">
+            <label for="quantity">Usual Number of Items per Order</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="30" value="1">
+        </div>
+        <div class="form-group">
+            <label for="delivery-time">Preferred Delivery Time</label>
+            <input type="time" id="delivery-time" name="delivery-time">
+        </div>
+        <div class="form-group">
+            <label for="sweetness">How much do you enjoy sweets? (1 to 10)</label>
+            <input type="range" id="sweetness" name="sweetness" min="1" max="10" value="7">
+        </div>
+        <div class="form-group">
+            <label for="address">Delivery Address</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your complete address" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="city">Select City</label>
+            <select id="city" name="city" required>
+                <option value="">-- Select your city --</option>
+                <option value="lahore" selected>Lahore</option>
+                <option value="islamabad">Islamabad</option>
+                <option value="karachi">Karachi</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="photo">Upload a Profile Picture (optional)</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+        </div>
+        <fieldset>
+            <legend>Preferred Contact Method</legend>
+            <label class="choice"><input type="radio" name="contact" value="email" checked> Email</label>
+            <label class="choice"><input type="radio" name="contact" value="phone"> Phone</label>
+            </fieldset>
+        <fieldset>
+            <legend>Your Favourite Products</legend>
+            <label class="choice"><input type="checkbox" name="products" value="cakes"> Cakes</label>
+            <label class="choice"><input type="checkbox" name="products" value="cupcakes"> Cupcakes</label>
+            <label class="choice"><input type="checkbox" name="products" value="cookies"> Cookies</label></fieldset>
+        <div class="form-group">
+            <label for="membership">Membership Type</label>
+            <input type="text" id="membership" name="membership" value="Standard Customer" readonly>
+        </div>
+        <div class="form-group">
+            <label for="discount">Special Discount Code</label>
+            <input type="text" id="discount" name="discount" value="Not available" disabled>
+        </div>
+        <label class="terms"><input type="checkbox" name="terms" required> I agree to the customer registration terms.</label>
+        <div class="form-buttons">
+            <button type="submit">Create Account</button>
+            <button type="reset" class="reset-button">Clear Form</button>
+        </div>
+    </form>
+</main>
+<footer class="register-footer">© 2026 Sweet Crumbs Bakery</footer>
+</body>
+</html>

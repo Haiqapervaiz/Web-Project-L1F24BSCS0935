@@ -1,0 +1,102 @@
+/* REGISTER PAGE CSS */
+* { box-sizing: border-box; }
+body { margin: 0;
+    font-family: 'Trebuchet MS', 
+    Arial, sans-serif; 
+    color: #3e3447; 
+    background: linear-gradient(135deg,#f8eef7,#fff7ed); }
+.register-header { padding: 28px 15px; 
+    text-align: center; 
+    color: white; 
+    background: #75517b; }
+.register-header h1 { margin: 0; 
+    font-family: Georgia,serif; }
+.register-nav { display: flex; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+    padding: 13px; 
+    background: #ead9ed; 
+    border-bottom: 3px solid #b58abb; }
+.register-nav a { padding: 8px 12px; 
+    color: #56365e; 
+    text-decoration: none; 
+    border-radius: 3px; }
+.register-nav a:hover, .register-nav a.selected { 
+    color: white; 
+    background: #75517b; }
+.form-area { padding: 30px 15px; }
+.registration-form { max-width: 760px; 
+    margin: 0 auto; 
+    padding: 28px; 
+    background: rgba(255,255,255,.94); 
+    border: 1px solid #ddc8e0; 
+    border-radius: 12px; 
+    box-shadow: 0 5px 18px rgba(69,40,74,.12); }
+.registration-form h2 { margin-top: 0; 
+    color: #75517b; 
+    border-bottom: 2px solid #ead9ed; 
+    padding-bottom: 10px; }
+.form-group { margin: 16px 0; }
+.form-group label { display: block; 
+    margin-bottom: 6px; 
+    font-weight: bold; }
+/* Attribute selectors target specific input types */
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="url"], input[type="number"], 
+input[type="time"], input[type="color"], input[type="file"], select, textarea { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #c7b2ca; 
+    border-radius: 5px; 
+    font: inherit; 
+    background: white; }
+input[type="range"] { 
+    width: 100%; 
+    accent-color: #75517b; }
+/* Pseudo-class selectors */
+input:focus, select:focus, textarea:focus { 
+    outline: 2px solid #b58abb; 
+    border-color: #75517b; }
+input:required:valid, textarea:required:valid { border-left: 4px solid #43845b; }
+input:invalid { border-color: #c45c62; }
+/* Combinators */
+label + input { margin-top: 2px; }
+fieldset { 
+    margin: 18px 0; 
+    padding: 15px; 
+    border: 1px solid #d7c2da; 
+    border-radius: 6px; }
+legend { 
+    padding: 0 7px; 
+    color: #75517b; 
+    font-weight: bold; }
+.choice { 
+    display: inline-block; 
+    margin: 7px 16px 7px 0; }
+.choice > input { accent-color: #75517b; }
+.terms { display: block; 
+    margin: 20px 0; }
+.terms::before { content: '✓ '; 
+    color: #43845b; font-weight: bold; }
+.form-buttons { display: flex; 
+    gap: 12px; 
+    flex-wrap: wrap; }
+button { padding: 11px 20px; 
+    color: white; 
+    background: #75517b; 
+    border: 0; 
+    border-radius: 5px; 
+    font-size: 15px; 
+    cursor: pointer; }
+button:hover { background: #56365e; }
+.reset-button { color: #56365e; 
+    background: #ead9ed; }
+.reset-button:hover { color: white; 
+    background: #9b7aa1; }
+.register-footer { padding: 14px; 
+    text-align: center; 
+    color: white; 
+    background: #56365e; }
+@media (max-width: 600px) { 
+    .registration-form { padding: 18px; } 
+    .register-nav { justify-content: center; gap: 5px; } 
+    .register-nav a { font-size: 13px; } }
