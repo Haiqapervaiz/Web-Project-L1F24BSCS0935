@@ -1,0 +1,299 @@
+
+/* MEDIA AND INFORMATION PAGE STYLESHEET */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3d4635;
+    background-color: #fff8ef;
+}
+
+
+/* Header styling */
+
+.media-header {
+    padding: 30px 5%;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #4f6042, #91a77a);
+}
+
+.media-header h1 {
+    margin: 5px;
+    font-family: Georgia, serif;
+    font-size: 36px;
+}
+
+.media-header p {
+    font-size: 16px;
+}
+
+
+/* Navigation bar */
+
+.media-nav {
+    margin-top: 22px;
+}
+
+.media-nav a {
+    display: inline-block;
+    margin: 5px;
+    padding: 11px 15px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.media-nav a:hover,
+.media-nav a.current {
+    background-color: #e8eddf;
+    color: #4f6042;
+}
+
+
+/* Main container */
+
+.media-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    overflow: auto;
+}
+
+
+/* Bakery story */
+
+.bakery-story {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #e8eddf;
+    border-left: 5px solid #91a77a;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+
+/* Section headings */
+
+.media-container h2 {
+    color: #4f6042;
+    font-family: Georgia, serif;
+    border-bottom: 2px solid #b8c6a5;
+    padding-bottom: 10px;
+}
+
+
+/* Image gallery */
+
+.media-gallery {
+    margin: 30px 0;
+}
+
+.gallery-intro {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* CSS Grid layout */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Individual image cards */
+
+.image-card {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #cbd5bd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(65, 85, 50, 0.12);
+    text-align: center;
+}
+
+
+/* Large and fully visible images */
+
+.image-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background-color: #f8f4ef;
+    border-radius: 7px;
+}
+
+.image-card h3 {
+    color: #657b50;
+    margin-bottom: 5px;
+}
+
+.image-card p {
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+
+/* Video section */
+
+.video-section {
+    margin: 35px 0;
+    padding: 25px;
+    background-color: #e8eddf;
+    border: 1px solid #cbd5bd;
+    border-radius: 10px;
+}
+
+.video-section video {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    max-height: 420px;
+    margin: 20px auto;
+    background-color: #222;
+    border-radius: 8px;
+}
+
+
+/* Ingredients section */
+
+.ingredients-section {
+    margin: 30px 0;
+    padding: 25px;
+    background-color: #eef0e6;
+    border-radius: 10px;
+}
+
+.list-columns {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.ingredient-box {
+    flex: 1;
+    min-width: 230px;
+    padding: 15px 25px;
+    background-color: white;
+    border: 1px solid #cbd5bd;
+    border-radius: 8px;
+}
+
+.ingredient-box li {
+    padding: 5px;
+}
+
+
+/* Price table */
+
+.price-section {
+    margin: 35px 0;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #cbd5bd;
+}
+
+.price-intro {
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #cbd5bd;
+    padding: 14px;
+    text-align: left;
+}
+
+th {
+    color: white;
+    background-color: #4f6042;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eef2e8;
+}
+
+tbody tr:hover {
+    background-color: #dce5d2;
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+/* Footer */
+
+.media-footer {
+    padding: 18px;
+    text-align: center;
+    color: white;
+    background-color: #4f6042;
+}
+
+
+/* Responsive design */
+
+@media (max-width: 850px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .media-container {
+        width: 94%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-card img {
+        height: 240px;
+    }
+
+    .media-header h1 {
+        font-size: 28px;
+    }
+
+    .media-nav a {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+}
+```
+
