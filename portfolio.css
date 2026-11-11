@@ -1,0 +1,258 @@
+
+/* PORTFOLIO PAGE  */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #49313f;
+    background: #fbf0f3;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* Header */
+.portfolio-header {
+    padding: 55px 20px;
+    color: #fff8fb;
+    text-align: center;
+    background: radial-gradient(circle at top, #b97891, #59364f 75%);
+}
+.portfolio-header h1 {
+    margin: 0 0 10px;
+    font-family: Georgia, serif;
+    font-size: 43px;
+}
+.portfolio-header p {
+    letter-spacing: 1px;
+}
+/* Navigation Bar */
+.portfolio-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #f3dfe6;
+    border-bottom: 1px solid #dfbdca;
+}
+.portfolio-nav a {
+    padding: 17px 18px;
+    color: #603d53;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+.portfolio-nav a:hover,
+.portfolio-nav a.active {
+    color: #a34f72;
+    border-bottom-color: #a34f72;
+}
+/* Main Container */
+.portfolio-main {
+    width: 90%;
+    max-width: 1180px;
+    margin: 40px auto;
+}
+/* Introduction */
+.portfolio-intro {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+.small-title {
+    color: #a34f72;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.portfolio-intro h2,
+.portfolio-note h2 {
+    color: #70435f;
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+.portfolio-intro p,
+.portfolio-note p {
+    line-height: 1.8;
+}
+/* CSS Grid Gallery */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "large cupcake brownie"
+        "large cookie bread"
+        "pastry pastry bread";
+    grid-auto-rows: 230px;
+    gap: 18px;
+}
+/* Gallery Cards */
+.portfolio-item {
+    position: relative;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #efdce4;
+    border-radius: 12px;
+    box-shadow: 0 5px 14px rgba(75, 42, 61, 0.16);
+    animation: appear 0.8s ease both;
+}
+.item-large {
+    grid-area: large;
+}
+.item-cupcake {
+    grid-area: cupcake;
+    animation-delay: 0.1s;
+}
+.item-brownie {
+    grid-area: brownie;
+    animation-delay: 0.2s;
+}
+.item-cookie {
+    grid-area: cookie;
+    animation-delay: 0.3s;
+}
+.item-bread {
+    grid-area: bread;
+    animation-delay: 0.4s;
+}
+.item-pastry {
+    grid-area: pastry;
+    animation-delay: 0.5s;
+}
+/* Gallery Images */
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.portfolio-item:hover img {
+    transform: scale(1.08);
+}
+/* Image Captions */
+.portfolio-item figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 28px 15px 14px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(
+        transparent,
+        rgba(48, 25, 42, 0.88)
+    );
+}
+.portfolio-item figcaption span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: normal;
+}
+/* Animation */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bottom Contact Section */
+
+.portfolio-note {
+    margin-top: 42px;
+    padding: 28px;
+    text-align: center;
+    background: #f0dce4;
+    border-radius: 12px;
+}
+
+.portfolio-note a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 22px;
+    color: white;
+    background: #80516c;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.portfolio-note a:hover {
+    background: #59364f;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+
+.portfolio-footer {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background: #59364f;
+}
+
+/* Tablet Responsive Design */
+
+@media (max-width: 850px) {
+    .portfolio-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "large large"
+            "cupcake brownie"
+            "cookie bread"
+            "pastry pastry";
+        grid-auto-rows: 220px;
+    }
+
+    .item-large {
+        min-height: 300px;
+    }
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 550px) {
+    .portfolio-header {
+        padding: 38px 15px;
+    }
+
+    .portfolio-header h1 {
+        font-size: 31px;
+    }
+
+    .portfolio-nav a {
+        padding: 11px 9px;
+        font-size: 13px;
+    }
+
+    .portfolio-main {
+        width: 92%;
+    }
+
+    .portfolio-gallery {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "large"
+            "cupcake"
+            "brownie"
+            "cookie"
+            "bread"
+            "pastry";
+        grid-auto-rows: 250px;
+    }
+
+    .item-large {
+        min-height: 250px;
+    }
+
+    .portfolio-intro h2 {
+        font-size: 25px;
+    }
+}
