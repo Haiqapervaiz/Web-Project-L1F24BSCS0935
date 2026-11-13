@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Sweet Crumbs Bakery</title>
+<link rel="stylesheet" href="contact.css">
+<script src="contact.js" defer></script>
+</head>
+<body>
+    <header class="contact-header">
+        <div class="header-content">
+            <span class="header-label">WE WOULD LOVE TO HEAR FROM YOU</span>
+            <h1>Let's Talk Something Sweet</h1>
+            <p>Questions, ideas or a special order? Send us a message.</p>
+        </div>
+    </header>
+    <nav class="contact-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="media.html">Media &amp; Prices</a>
+        <a href="register.html">Register</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <main class="contact-layout">
+        <section class="about-panel">
+            <h2>About Sweet Crumbs</h2>
+            <p>Sweet Crumbs Bakery is a small bakery website concept created to share freshly baked treats, celebration cakes and dessert ideas.</p>
+            <p>Our aim is to make it easy for visitors to explore our products and contact us about their bakery needs.</p>
+            <div class="contact-detail">
+                <h3>Visit or Contact</h3>
+                <p><strong>Email:</strong> hello@sweetcrumbsbakery.example</p>
+                <p><strong>Phone:</strong> +92 300 1234567</p>
+                <p><strong>Hours:</strong> Monday - Saturday, 9:00 AM - 7:00 PM</p>
+            </div>
+            <div class="about-message"><p>Freshly baked happiness, every day!</p></div>
+        </section>
+        <section class="form-panel">
+            <h2>Send Us a Message</h2>
+            <p>Complete the form below and we will be happy to hear from you.</p>
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="visitorName">Your Name</label>
+                        <input type="text" id="visitorName" name="visitorName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="visitorEmail">Email Address</label>
+                        <input type="email" id="visitorEmail" name="visitorEmail" placeholder="name@example.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Choose a subject</option>
+                        <option value="cake">Custom cake enquiry</option>
+                        <option value="dessert">Dessert or brownie enquiry</option>
+                        <option value="order">Order information</option>
+                        <option value="other">Other question</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <label class="check-row">
+                    <input type="checkbox" id="copyCheck"> I would like to receive a copy of my message summary.</label>
+                    <button type="submit">Send Message</button>
+                    <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+                    <div id="messageSummary" class="message-summary" hidden></div>
+            </form>
+        </section>
+    </main>
+    <footer class="contact-footer">
+        <p>&copy; 2026 Sweet Crumbs Bakery. Thank you for visiting!</p>
+    </footer>
+</body>
+</html>
