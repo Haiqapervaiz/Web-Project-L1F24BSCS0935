@@ -1,0 +1,157 @@
+/* CONTACT PAGE - RESPONSIVE TWO COLUMN DESIGN */
+* { 
+    box-sizing: border-box;
+ }
+body { 
+    margin: 0;
+    color: #34433c;
+    background: #f3f6f0; 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+.contact-header { padding: 48px 6%; 
+    color: #f9fff8; 
+    background: linear-gradient(110deg, #40594c, #78927b); 
+}
+.header-content { max-width: 1100px; 
+    margin: auto; 
+}
+.header-label { font-size: 11px; 
+    letter-spacing: 3px; 
+    font-weight: bold; 
+}
+.contact-header h1 { margin: 12px 0; 
+    font-family: Georgia, serif; 
+    font-size: 39px; }
+.contact-header p { line-height: 1.6; }
+.contact-nav { display: flex; 
+    justify-content: flex-end; 
+    flex-wrap: wrap; 
+    gap: 7px; 
+    padding: 14px 5%; 
+    background: #e1e9df; 
+}
+.contact-nav a { padding: 10px 13px; 
+    color: #40594c; 
+    text-decoration: none; 
+    border-radius: 4px; 
+    transition: background .3s, color .3s; 
+}
+.contact-nav a:hover, .contact-nav a.active { color: white; 
+    background: #58745f; 
+}
+.contact-layout { display: grid; 
+    grid-template-columns: .85fr 1.4fr; 
+    align-items: start; 
+    gap: 28px; 
+    width: 90%; 
+    max-width: 1150px; 
+    margin: 40px auto; 
+}
+.about-panel { padding: 28px; 
+    color: #f7fff5; 
+    background: #40594c; 
+    border-radius: 16px 4px 16px 4px; 
+    box-shadow: 0 8px 20px rgba(40,65,48,.15); 
+}
+.about-panel h2, .form-panel h2 { margin-top: 0; 
+    font-family: Georgia, serif; 
+}
+.about-panel p { line-height: 1.8; }
+.contact-detail { margin-top: 30px; 
+    padding-top: 15px; 
+    border-top: 1px solid rgba(255,255,255,.35); 
+}
+.contact-detail p { overflow-wrap: anywhere; 
+    font-size: 14px; 
+}
+.about-message { margin-top: 28px; 
+    padding: 12px; 
+    color: #40594c; 
+    background: #e4eddc; 
+    border-radius: 8px; 
+    text-align: center; 
+    font-family: Georgia, serif; 
+    font-style: italic; 
+}
+.form-panel { padding: 30px; 
+    background: white; 
+    border: 1px solid #dce6d9; 
+    border-radius: 8px 18px 8px 18px; 
+    box-shadow: 0 8px 22px rgba(40,65,48,.09); 
+}
+.form-panel > p { line-height: 1.6; }
+.form-row { display: flex; 
+    gap: 18px; 
+}
+.form-group { display: flex; 
+    flex: 1; 
+    flex-direction: column; 
+    margin: 17px 0; }
+.form-group label { margin-bottom: 7px; 
+    color: #40594c; 
+    font-weight: bold; 
+    font-size: 14px; }
+.form-group input, .form-group select, .form-group textarea { 
+    width: 100%; 
+    padding: 12px; 
+    color: #34433c; 
+    background: #fbfdf9; 
+    border: 1px solid #bdcdbb; 
+    border-radius: 6px; 
+    font: inherit; 
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { 
+    outline: 2px solid #91aa8f; 
+    border-color: #58745f; 
+}
+.form-group textarea { resize: vertical; }
+.check-row { display: flex; 
+    align-items: flex-start; 
+    gap: 9px; 
+    margin: 15px 0; 
+    font-size: 13px; 
+    line-height: 1.5; 
+}
+.check-row input { margin-top: 3px; 
+    accent-color: #58745f; 
+}
+button { padding: 13px 25px; 
+    color: white; 
+    background: #58745f; 
+    border: 0; 
+    border-radius: 6px; 
+    font-size: 15px; 
+    cursor: pointer; 
+    transition: background .3s, transform .3s; 
+}
+button:hover { background: #344b3b; 
+    transform: translateY(-2px); 
+}
+.form-feedback { min-height: 22px; 
+    color: #40594c; 
+    font-weight: bold; 
+}
+.message-summary { margin-top: 12px; 
+    padding: 15px; 
+    background: #eaf1e6; 
+    border-left: 4px solid #58745f; 
+    border-radius: 5px; 
+    overflow-wrap: anywhere; 
+}
+.contact-footer { padding: 20px; 
+    color: white; 
+    background: #344b3b; 
+    text-align: center; 
+}
+/* Tablet breakpoint */
+@media (max-width: 850px) { 
+    .contact-layout { grid-template-columns: 1fr; } 
+    .contact-nav { justify-content: center; } }
+/* Mobile breakpoint */
+@media (max-width: 550px) { 
+    .contact-header { padding: 35px 6%; } 
+    .contact-header h1 { font-size: 29px; } 
+    .contact-nav a { padding: 8px; font-size: 13px; } 
+    .contact-layout { width: 93%; margin: 25px auto; } 
+    .form-panel, .about-panel { padding: 21px; } 
+    .form-row { flex-direction: column; gap: 0; } }
